@@ -52,6 +52,7 @@ form .btnSignIn:hover {
 .headerSignUp {
     margin: 0 auto 30px auto;
     color: rgba(0,0,0,0.6);
+    text-align: center;
 }
 .logoSignUp {
     display: block;
