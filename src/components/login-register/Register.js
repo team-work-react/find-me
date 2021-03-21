@@ -26,6 +26,13 @@ const Register = ({ submitForm }) => {
               onChange={handleChange}
             />
             {errors.email && <p className={styles.errors}>{errors.email}</p>}
+            <label>Username</label>
+            <input
+              type="text"
+              name="username"
+              value={values.name}
+              onChange={handleChange}
+            />
             <label>Password (6 or more characters)</label>
             <input
               type="password"

@@ -1,0 +1,63 @@
+.content {
+  width: 40%;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.inputPost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid lightgray;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.avatar img {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.createPost {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.createPost input {
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 2px solid lightgray;
+  color: gray;
+  font-size: 16px;
+  outline: none;
+  width: 60%;
+}
+.createPost input:hover {
+  background-color: #f3f2ef;
+}
+.addPost {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: grey;
+  cursor: pointer;
+  font-size: 16px;
+}
+.addPost:hover {
+  color: #000;
+}
+.posts {
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 10px;
+}
