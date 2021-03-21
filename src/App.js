@@ -1,6 +1,7 @@
 import "./App.css";
 import SignInSignUp from "./components/login-register";
 import Header from "./components/header/index";
+import AppBody from "./components/main-content/index";
 import React, { useState } from "react";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       ) : (
         <div className="App">
           <Header />
+          <AppBody />
         </div>
       )}
     </>

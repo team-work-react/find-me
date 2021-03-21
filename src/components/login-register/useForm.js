@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 const useForm = (submitForm, validate) => {
   const [values, setValues] = useState({
     email: "",
+    username: "",
     password: "",
     password2: "",
   });
@@ -28,7 +29,7 @@ const useForm = (submitForm, validate) => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
       submitForm();
     }
-  }, [errors]);
+  }, [errors, isSubmitting, submitForm]);
   return { handleChange, values, handleSubmit, errors };
 };
 
