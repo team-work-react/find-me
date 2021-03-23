@@ -4,10 +4,11 @@ import logo from "./../../assets/images/findMe.png";
 import useForm from "./useForm";
 import validate from "./validateInfo";
 
-const Register = ({ submitForm }) => {
+const Register = ({ submitForm, users, showLoginForm }) => {
   const { handleChange, values, handleSubmit, errors } = useForm(
     submitForm,
-    validate
+    validate,
+    users
   );
   return (
     <>
@@ -57,7 +58,9 @@ const Register = ({ submitForm }) => {
           </div>
           <div className={styles.loginedUser}>
             <span>Already on FindMe?</span>
-            <span className={styles.alreadyLogined}>Sign in</span>
+            <span className={styles.alreadyLogined} onClick={showLoginForm}>
+              Sign in
+            </span>
           </div>
         </form>
       </div>

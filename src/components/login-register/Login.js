@@ -2,10 +2,12 @@ import React from "react";
 import styles from "./style.module.css";
 import logo from "./../../assets/images/findMe.png";
 
-function Login() {
+function Login({ showRegisterForm }) {
   return (
     <>
-      <img src={logo} alt="logo" className={styles.logoSignIn} />
+      <div className={styles.logoSignIn}>
+        <img src={logo} alt="logo" />
+      </div>
       <div className={styles.formWrapper}>
         <form method="POST">
           <h1>Sign in</h1>
@@ -19,7 +21,9 @@ function Login() {
           </div>
           <div className={styles.loginedUser}>
             <span>New to FindMe?</span>
-            <span className={styles.alreadyLogined}>Join now</span>
+            <span className={styles.alreadyLogined} onClick={showRegisterForm}>
+              Join now
+            </span>
           </div>
         </form>
       </div>

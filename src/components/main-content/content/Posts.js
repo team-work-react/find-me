@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./style.module.css";
 
-function Posts() {
-  return <div className={styles.posts}>here shoul be user post</div>;
+function Posts({ text }) {
+  return <div className={styles.posts}>{text}</div>;
 }
 
 export default Posts;

@@ -1,6 +1,12 @@
-export default function validateInfo(values) {
-  let errors = {};
+export function check(arr, values) {
+  const found = arr.some((el) => el.email === values.email);
+  if (!found) arr.push(values);
+  return arr;
+}
 
+export default function validateInfo(values, users) {
+  let errors = {};
+  let length = users.length;
   //Email
   if (!values.email) {
     errors.email = "*Email required";
@@ -10,6 +16,11 @@ export default function validateInfo(values) {
     )
   ) {
     errors.email = "*Email address is invalid";
+  } else {
+    check(users, values);
+    if (length === users.length) {
+      errors.email = "*User width this email already exists";
+    }
   }
 
   //password
