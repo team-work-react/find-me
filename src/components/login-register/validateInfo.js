@@ -58,7 +58,7 @@ export default function validateInfo(values, users) {
   } else {
     check(users, values);
     if (length === users.length) {
-      errors.email = "*User width this email already exists";
+      errors.email = "*User with this email already exists";
     }
   }
 
