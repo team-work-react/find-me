@@ -2,7 +2,7 @@ import Register from "./Register";
 import React, { useState } from "react";
 import Login from "./Login";
 
-const SignInSignUp = ({ submitForm, isSubmitted, users }) => {
+const SignInSignUp = ({ submitForm, users }) => {
   const [showLogin, setShowLogin] = useState(true);
   const [showRegister, setShowRegister] = useState(false);
 
@@ -16,9 +16,20 @@ const SignInSignUp = ({ submitForm, isSubmitted, users }) => {
   };
   return (
     <div>
-      {showLogin && <Login showRegisterForm={showRegisterForm} />}
-      {showRegister && <Register showLoginForm={showLoginForm} />}
-      {/* {!isSubmitted && <Register submitForm={submitForm} users={users} />} */}
+      {showLogin && (
+        <Login
+          showRegisterForm={showRegisterForm}
+          submitForm={submitForm}
+          users={users}
+        />
+      )}
+      {showRegister && (
+        <Register
+          showLoginForm={showLoginForm}
+          submitForm={submitForm}
+          users={users}
+        />
+      )}
     </div>
   );
 };
